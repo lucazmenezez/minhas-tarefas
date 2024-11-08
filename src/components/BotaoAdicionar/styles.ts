@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const EstiloBotao = styled(Link)`
-  background-color: #44bd32;
+  background-color: ${variaveis.verde};
   color: #fff;
   height: 64px;
   width: 64px;
