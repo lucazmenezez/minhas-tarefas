@@ -12,6 +12,10 @@ export const Form = styled.form`
     margin: 16px 0;
     height: 150px;
   }
+
+  @media (max-width: 767px) {
+    margin-bottom: 100px;
+  }
 `
 
 export const Opcoes = styled.div`

@@ -2,6 +2,12 @@ import styled, { createGlobalStyle } from 'styled-components'
 import variaveis from './variaveis'
 
 const EstiloGlobal = createGlobalStyle`
+  /* Garantir que o html e body ocupem 100% da altura da tela */
+  html, body {
+    height: 100%;
+    overflow-y: auto;  /* Permitir rolagem somente na página inteira */
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -17,13 +23,20 @@ export const Container = styled.div`
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
+    height: 100%;
+    overflow: hidden;
   }
 `
 
 export const Main = styled.main`
   padding: 0 40px;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
+
+  @media (max-width: 767px) {
+    height: 100%;
+    padding: 20px;
+  }
 `
 
 export const Titulo = styled.h2`
@@ -55,10 +68,6 @@ export const Botao = styled.button`
   background-color: ${variaveis.azulEscuro};
   border-radius: 8px;
   margin-right: 8px;
-
-  @media (max-width: 767px) {
-    font-size: 16px;
-  }
 `
 
 export const BotaoSalvar = styled(Botao)`
