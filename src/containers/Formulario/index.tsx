@@ -1,9 +1,9 @@
 import { FormEvent, useState } from 'react'
-import { Form, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
 import { BotaoSalvar, Campo, Main, Titulo } from '../../styles'
-import { Opcao, Opcoes } from './styles'
+import { Form, Opcao, Opcoes } from './styles'
 import * as enums from '../../utils/enums/tarefa'
 import { cadastrar } from '../../store/reducers/tarefas'
 
@@ -40,9 +40,9 @@ const Formulario = () => {
             placeholder="Título"
           />
           <Campo
+            as="textarea"
             value={descricao}
             onChange={({ target }) => setDescricao(target.value)}
-            as="textarea"
             placeholder="Descrição da tarefa"
           />
           <Opcoes>
