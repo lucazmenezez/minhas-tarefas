@@ -14,6 +14,10 @@ const EstiloGlobal = createGlobalStyle`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Main = styled.main`
@@ -51,6 +55,10 @@ export const Botao = styled.button`
   background-color: ${variaveis.azulEscuro};
   border-radius: 8px;
   margin-right: 8px;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
 `
 
 export const BotaoSalvar = styled(Botao)`
