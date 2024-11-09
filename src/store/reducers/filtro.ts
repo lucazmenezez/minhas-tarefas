@@ -20,8 +20,8 @@ const filtroSlice = createSlice({
       state.termo = action.payload
     },
     alterarFiltro: (state, action: PayloadAction<FiltroState>) => {
-      state.criterio === action.payload.criterio
-      state.valor === action.payload.valor
+      state.criterio = action.payload.criterio
+      state.valor = action.payload.valor
     }
   }
 })
